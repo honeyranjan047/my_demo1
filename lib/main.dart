@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './app_screens/FirstScreen.dart';
 
 void main() {
   runApp( new FlutterClass()
@@ -15,16 +16,7 @@ class FlutterClass extends StatelessWidget
           appBar: AppBar(
             title: Text("My First Android Flutter App"),
           ),
-          body: Material(
-            color: Colors.blueAccent,
-            child: Center(
-              child: Text(
-                ("Hello flutter"),
-                textDirection: TextDirection.ltr,
-                style: TextStyle (color: Colors.white),
-              ),
-            ),
-          ),
+          body: FirstScreen()
         )
     );
     throw UnimplementedError();
