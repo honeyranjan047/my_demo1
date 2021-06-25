@@ -99,10 +99,10 @@ class RaisedButton1 extends StatelessWidget {
               textDirection: TextDirection.ltr,
             ),
             onPressed: () {
-              //implement the method to be called
+              openButton(context);
             },
             onLongPress: () {
-              //implement long Press functionality of the button
+             openLongButton(context);
             },
             style: ButtonStyle(
                   // elevation: 6.0,
@@ -111,4 +111,33 @@ class RaisedButton1 extends StatelessWidget {
                 )));
     throw UnimplementedError();
   }
+
+  void openButton(BuildContext context)
+  {
+    var customAlertDialog = new AlertDialog(
+      title: Text('System Message'),
+      content: Text('The button has been pressed'),
+    );
+
+    showDialog(context: context, builder: (BuildContext context)
+    {
+      return customAlertDialog;
+    }
+    );
+  }
+  void openLongButton(BuildContext context)
+  {
+    var customAlertDialog = new AlertDialog(
+      title: Text('System Message'),
+      content: Text('The button has been long pressed'),
+    );
+
+    showDialog(context: context, builder: (BuildContext context)
+    {
+      return customAlertDialog;
+    }
+    );
+  }
+
 }
+
