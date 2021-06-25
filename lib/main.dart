@@ -3,6 +3,8 @@ import './App-Screens/Home.dart';
 
 void main() {
   runApp(
+    MaterialApp(home:
       Home()
+    )
   );
 }
